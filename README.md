@@ -48,12 +48,14 @@ npx hardhat run scripts/sample-script.js
 
 就可以看到contract部署到了本地。
 
+2.4在本地运行轻节点：npx hardhat node   （在本地运行 模拟的ETH节点）
+
 3.使用 web3.js 进行查询，打开新的窗口
 
 引入web3.js : npm install web
 
 创建一个文件： （当前目录下） run.js
-4.1查询
+3.1查询
 可以查询该 节点下的所有account:
 
 curl -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1}' localhost:8545
@@ -71,5 +73,4 @@ curl -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","metho
 curl -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266", "latest"],"id":1}' 127.0.0.1:8545
 
 
-2.4在本地运行轻节点：npx hardhat node   （在本地运行 模拟的ETH节点）
 
